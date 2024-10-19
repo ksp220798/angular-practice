@@ -1,0 +1,48 @@
+<h1>hii this is my first app component</h1>
+<h2>{{message}}</h2>
+<button (click)="displayAlert();isvisible=!isvisible">click me</button>
+<!-- <img *ngIf="isvisible" [src]="imgUrl" alt="" srcset=""> -->
+<input [(ngModel)]="myname" placeholder="Enter your name">
+<p >Your name is: {{ myname }}</p>
+
+<ul *ngFor="let x of name">
+    
+<li [ngClass]="{}">Hii my : {{x}} </li>
+</ul>
+<input placeholder="give us the rating" [(ngModel)]="ratingPart" min="1" max="5">
+
+<div [ngSwitch]="ratingPart">
+    <ul>
+        <li *ngSwitchCase="1">
+            very low
+        </li>
+        <li *ngSwitchCase="2">
+            low
+        </li>
+        <li *ngSwitchCase="3">
+            good
+        </li>
+        <li *ngSwitchCase="4">
+            very good
+        </li>
+        <li *ngSwitchCase="5">
+            execllent
+        </li>
+        <li *ngSwitchDefault>
+            please select from 1 to 5
+        </li>
+    </ul>
+</div>
+<div>
+    {{MyFirstServiceServices.getGreeting()}}
+</div>
+
+<div>Data From API</div>
+<ul >
+    <li *ngFor="let x of apiData">
+        <strong>{{x.id}}</strong>
+        <p>{{x.body}}</p>
+    </li>
+</ul>
+
+
