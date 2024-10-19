@@ -39,7 +39,7 @@
 
 <div>Data From API</div>
 <ul >
-    <li *ngFor="let x of apiData">
+    <li *ngFor="let x of apiData | slice:0:2">
         <strong>{{x.id}}</strong>
         <p>{{x.body}}</p>
     </li>
